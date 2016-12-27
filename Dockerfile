@@ -20,8 +20,12 @@ RUN apt-get update && \
       php7.0-xml \
       php7.0-xsl \
       php7.0-zip \
-      php7.0-soap
+      php7.0-soap \
+      curl \
+      git \
+      unzip
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 COPY apache_default /etc/apache2/sites-available/000-default.conf
 COPY run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
