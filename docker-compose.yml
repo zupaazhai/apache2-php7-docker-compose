@@ -1,0 +1,7 @@
+web:
+    build: .
+    dockerfile: Dockerfile
+    ports:
+        - "81:80"
+    volumes:
+        - ./code:/var/www
