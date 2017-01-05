@@ -2,6 +2,14 @@ web:
     build: .
     dockerfile: Dockerfile
     ports:
-        - "81:80"
+        - "82:80"
     volumes:
         - ./code:/var/www
+    links:
+        - db
+db:
+    image: mysql:latest
+    ports:
+        - "3361:3360"
+    environment:
+        MYSQL_ROOT_PASSWORD: "mypassword"
