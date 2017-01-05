@@ -1,5 +1,5 @@
 # Apache2 and PHP7 Docker Compose
-Docker compose file for Apache2 and PHP7
+Docker compose file for Apache2, MySQL and PHP7
 
 ```
 # Build
