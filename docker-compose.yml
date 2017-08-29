@@ -4,7 +4,7 @@ web:
     ports:
         - "80:80"
     volumes:
-        - ./code:/var/www
+        - ./services:/var/www
     links:
         - db
 db:
